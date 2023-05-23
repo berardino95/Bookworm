@@ -16,6 +16,7 @@
 		5F9546F42A1ABE4300020DD0 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5F9546F32A1ABE4300020DD0 /* Preview Assets.xcassets */; };
 		5F9546FC2A1AC35E00020DD0 /* Bookworm.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 5F9546FA2A1AC35E00020DD0 /* Bookworm.xcdatamodeld */; };
 		5F9546FE2A1AC41F00020DD0 /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F9546FD2A1AC41F00020DD0 /* DataController.swift */; };
+		7F5A88BD2A1C9A500031DB8E /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F5A88BC2A1C9A500031DB8E /* DetailView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +30,7 @@
 		5F9546F32A1ABE4300020DD0 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		5F9546FB2A1AC35E00020DD0 /* Bookworm.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Bookworm.xcdatamodel; sourceTree = "<group>"; };
 		5F9546FD2A1AC41F00020DD0 /* DataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataController.swift; sourceTree = "<group>"; };
+		7F5A88BC2A1C9A500031DB8E /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +71,7 @@
 				5F348A792A1BFA2D008D3C14 /* AddBookView.swift */,
 				5F9546FD2A1AC41F00020DD0 /* DataController.swift */,
 				5F9546F02A1ABE4300020DD0 /* Assets.xcassets */,
+				7F5A88BC2A1C9A500031DB8E /* DetailView.swift */,
 				5F9546F22A1ABE4300020DD0 /* Preview Content */,
 			);
 			path = Bookworm;
@@ -153,6 +156,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5F9546EF2A1ABE4200020DD0 /* ContentView.swift in Sources */,
+				7F5A88BD2A1C9A500031DB8E /* DetailView.swift in Sources */,
 				5F9546FE2A1AC41F00020DD0 /* DataController.swift in Sources */,
 				5F348A7E2A1C0AD6008D3C14 /* EmojiRatingView.swift in Sources */,
 				5F9546FC2A1AC35E00020DD0 /* Bookworm.xcdatamodeld in Sources */,
@@ -295,6 +299,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -324,6 +329,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

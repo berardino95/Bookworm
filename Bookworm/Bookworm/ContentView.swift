@@ -10,7 +10,9 @@ import SwiftUI
 struct ContentView: View {
     
     @Environment(\.managedObjectContext) var moc
-    @FetchRequest(sortDescriptors: []) var books : FetchedResults<Book>
+    @FetchRequest(sortDescriptors: [
+        SortDescriptor(\.title)
+    ]) var books : FetchedResults<Book>
     
     @State private var addBookIsShowed = false
     
@@ -19,13 +21,13 @@ struct ContentView: View {
             List{
                 ForEach(books) { book in
                     NavigationLink{
-                        Text(book.title ?? "Unknown Title")
+                        DetailView(book: book)
                     } label: {
                         HStack {
                             VStack (alignment: .leading){
                                 Text(book.title ?? "Unknown Title")
                                     .font(.headline)
-                                Text(book.author ?? "Unkwnown Author")
+                                Text(book.author ?? "Unknown Author")
                                     .foregroundColor(.secondary)
                             }
                             
