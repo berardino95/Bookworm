@@ -24,15 +24,23 @@ struct ContentView: View {
                         DetailView(book: book)
                     } label: {
                         HStack {
+                            EmojiRatingView(rating: book.rating)
+                                .font(.largeTitle)
+                            
                             VStack (alignment: .leading){
                                 Text(book.title ?? "Unknown Title")
                                     .font(.headline)
+                                    .foregroundColor(book.rating == 1 ? Color.red : Color.primary)
                                 Text(book.author ?? "Unknown Author")
                                     .foregroundColor(.secondary)
                             }
                             
-                            EmojiRatingView(rating: book.rating)
-                                .font(.largeTitle)
+                            Spacer()
+                            HStack{
+                                Text("\(book.rating)")
+                                Image(systemName: "star.fill")
+                                    .foregroundColor(.yellow)
+                            }
                         }
                     }
                 }

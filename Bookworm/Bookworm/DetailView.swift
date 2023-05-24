@@ -43,6 +43,14 @@ struct DetailView: View {
             
             RatingView(rating: .constant(Int(book.rating)))
                 .font(.largeTitle)
+            
+            if let date = book.date {
+                Text("Added on: \(date.formatted(date: .abbreviated, time: .omitted))")
+                    .font(.caption)
+                    .opacity(0.75)
+                    .padding()
+            }
+            
         }
         .navigationTitle(book.title ?? "Unknown Book")
         .navigationBarTitleDisplayMode(.inline)

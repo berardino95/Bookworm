@@ -14,10 +14,20 @@ struct AddBookView: View {
     @State private var title = ""
     @State private var author = ""
     @State private var rating = 3
-    @State private var genre = ""
+    @State private var genre = genres[0]
     @State private var review = ""
+    @State private var date = Date.now
     
-    let genres = ["Fantasy", "Horror", "Kids", "Mystery", "Poetry", "Romance", "Thriller"]
+    static let genres = ["Fantasy", "Horror", "Kids", "Mystery", "Poetry", "Romance", "Thriller"]
+    
+    
+    var textIsEmpty : Bool {
+        if title.isValid || author.isValid || review.isValid{
+            return true
+        }
+        return false
+    }
+
     
     var body: some View {
         NavigationView{
@@ -27,7 +37,7 @@ struct AddBookView: View {
                     TextField("Author's name", text: $author)
                     
                     Picker("Genre", selection: $genre) {
-                        ForEach(genres, id: \.self) {
+                        ForEach(AddBookView.genres, id: \.self) {
                             Text($0)
                         }
                     }
@@ -49,6 +59,7 @@ struct AddBookView: View {
                         newBook.rating = Int16(rating)
                         newBook.genre = genre
                         newBook.review = review
+                        newBook.date = date
                         
                         try? moc.save()
                         dismiss()
@@ -61,6 +72,7 @@ struct AddBookView: View {
                         }
                     }
                 }
+                .disabled(textIsEmpty == true)
                 
             }
             .navigationTitle("Add book")
