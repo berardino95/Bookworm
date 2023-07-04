@@ -34,7 +34,22 @@ struct RatingView: View {
                         rating = number
                     }
             }
-            
+            //Ignore default screen reader info
+            .accessibilityElement()
+            //add custom accessibility info
+            .accessibilityLabel("Rating")
+            .accessibilityValue(rating == 1 ? "1 star" : "\(rating) stars")
+            //Custom gesture action when using screen reader
+            .accessibilityAdjustableAction{ direction in
+                switch direction {
+                case .decrement:
+                    if rating > 1 { rating -= 1 }
+                case .increment:
+                    if rating < maximumRating { rating += 1 }
+                default:
+                    break
+                }
+            }
         }
     }
     
